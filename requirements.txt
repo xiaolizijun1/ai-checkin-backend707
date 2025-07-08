@@ -1,10 +1,17 @@
+# 核心构建工具
 setuptools>=65.5.0
 wheel
+
+# WSGI 服务器
 gunicorn
+
+# Flask 相关
 Flask==3.1.1
 Flask-Cors==6.0.1
 Flask-JWT-Extended==4.7.1
 Flask-SQLAlchemy==3.1.1
+
+# 机器学习与图像处理
 torch==2.7.1
-numpy==1.26.4
-Pillow==10.2.0
+numpy==1.24.4         # ✅ 更兼容，构建成功率高
+Pillow=
