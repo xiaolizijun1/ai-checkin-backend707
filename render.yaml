@@ -2,11 +2,12 @@ services:
   - type: web
     name: ai-checkin-backend
     env: python
-    plan: free
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
+    startCommand: gunicorn 'app:create_app()'
     envVars:
       - key: FLASK_ENV
         value: production
+      - key: JWT_SECRET_KEY
+        value: lp123
     build:
       pythonVersion: 3.10.18
