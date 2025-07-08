@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ai-checkin-backend
+    env: python
+    buildCommand: ""
+    startCommand: "python app.py"
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: JWT_SECRET_KEY
+        value: your-secret-key
